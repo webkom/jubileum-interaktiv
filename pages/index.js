@@ -21,6 +21,7 @@ insertRule(`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -29,5 +30,5 @@ insertRule(`
 `);
 
 const style = css({
-  background: '#fff'
+  height: '100vh'
 });
