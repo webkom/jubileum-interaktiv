@@ -7,6 +7,7 @@ import { Header, Events, Footer } from '../components';
 export default () => (
   <div className={style}>
     <Head>
+      <meta charSet="utf-8" />
       <title>Jubileum</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
     </Head>
@@ -25,10 +26,11 @@ insertRule(`
   }
 
   body {
-    font-family: Roboto, sans-serif;
+    font-family: Menlo, Roboto, sans-serif;
   }
 `);
 
 const style = css({
-  height: '100vh'
+  height: '100vh',
+  lineHeight: 1.8
 });

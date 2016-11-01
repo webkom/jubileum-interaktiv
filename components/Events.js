@@ -1,54 +1,66 @@
 import React from 'react';
 import css from 'next/css';
+import moment from 'moment';
 import { container } from './styles';
 
 const events = {
   'Mandag': [{
     id: 2,
     title: 'Mekk og drekk',
-    startsAt: new Date(),
-    endsAt: new Date(),
+    startsAt: moment(),
+    endsAt: moment(),
     location: 'Downtown'
   }],
   'Tirsdag': [{
     id: 2,
     title: 'Strikk og drikk',
-    startsAt: new Date(),
-    endsAt: new Date(),
+    startsAt: moment(),
+    endsAt: moment(),
     location: 'Downtown'
   }],
   'Onsdag': [{
     id: 3,
     title: 'Vask og smask',
-    startsAt: new Date(),
-    endsAt: new Date(),
+    startsAt: moment(),
+    endsAt: moment(),
     location: 'Downtown'
   }],
   'Torsdag': [{
     id: 3,
     title: 'Løp og kjøp',
-    startsAt: new Date(),
-    endsAt: new Date(),
+    startsAt: moment(),
+    endsAt: moment(),
+    location: 'Downtown'
+  }, {
+    id: 4,
+    title: 'Penger schmenger',
+    startsAt: moment(),
+    endsAt: moment(),
     location: 'Downtown'
   }],
   'Fredag': [{
-    id: 3,
+    id: 5,
     title: 'Ljug og sug',
-    startsAt: new Date(),
-    endsAt: new Date(),
+    startsAt: moment(),
+    endsAt: moment(),
     location: 'Downtown'
   }],
 };
 
 export default function Events() {
   return (
-    <div className={[container, styles].join(' ')}>
+    <div className={[container].join(' ')}>
       {Object.keys(events).map((day) => (
-        <div key={day}>
-          <h2>{day}</h2>
+        <div key={day} className={css(styles.day)}>
+          <h2 className={css(styles.dayTitle)}>{day}</h2>
           {events[day].map((event) => (
-            <div key={event.id}>
-              {event.title}
+            <div key={event.id} className={css(styles.event)}>
+              <h3>{event.title}</h3>
+              <div>
+              <time>{event.startsAt.format('HH:mm')}</time>
+              {' @ '}
+              <span>{event.location}</span>
+              </div>
             </div>
           ))}
         </div>
@@ -57,7 +69,22 @@ export default function Events() {
   );
 }
 
-const styles = css({
-  background: 'linear-gradient(90deg, #fff 50%, #ddd 0)',
-  padding: 20
-});
+const styles = {
+  day: {
+    marginBottom: 10
+  },
+
+  dayTitle: {
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    color: '#B11B11',
+    fontSize: 20,
+    borderBottom: '1px solid #ddd'
+  },
+
+  event: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 10
+  }
+};

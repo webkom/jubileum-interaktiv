@@ -10,6 +10,7 @@
     "postinstall": "if [ $BUILD_ASSETS ]; then npm run build; fi"
   },
   "dependencies": {
+    "moment": "^2.15.2",
     "next": "^1.0.2"
   }
 }
