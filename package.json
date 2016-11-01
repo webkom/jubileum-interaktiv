@@ -1,9 +1,13 @@
 {
   "name": "jubileum-pwa",
+  "engines": {
+    "node": "7.0.0"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "postinstall": "if [ $BUILD_ASSETS ]; then npm run build; fi"
   },
   "dependencies": {
     "next": "^1.0.2"
