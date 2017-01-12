@@ -1,11 +1,10 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import css, { insertRule } from 'next/css';
+import style from 'next/css';
 import { Header, Events, Footer } from '../components';
 
 export default () => (
-  <div className={style}>
+  <div>
     <Head>
       <meta charSet="utf-8" />
       <title>Jubileum</title>
@@ -15,22 +14,17 @@ export default () => (
     <Header />
     <Events />
     <Footer />
+
+    <style jsx global>{`
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Menlo, Roboto, sans-serif;
+      }
+    `}</style>
   </div>
 );
-
-insertRule(`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Menlo, Roboto, sans-serif;
-  }
-`);
-
-const style = css({
-  height: '100vh',
-  lineHeight: 1.8
-});

@@ -1,18 +1,17 @@
-import React from 'react';
-import css from 'next/css';
-import { container } from './styles';
-
-export default function Footer() {
+export default () => {
   return (
-    <div className={[container, styles].join(' ')}>
+    <div>
       Like us on Fuuto
+      <style jsx>{`
+        div {
+          max-width: 640px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        }
+      `}</style>
     </div>
   );
-}
-
-const styles = css({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: 20
-});
+};
