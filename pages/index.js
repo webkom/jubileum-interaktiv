@@ -35,7 +35,7 @@ export default class extends Component {
 
   render() {
     return (
-      <Page>
+      <Page title="Home">
         <Events events={this.props.events} />
       </Page>
     );
