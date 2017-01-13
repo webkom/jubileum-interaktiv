@@ -1,9 +1,7 @@
-
 import Page from '../layouts/Page';
-import { Header, Events } from '../components';
 
 export default () => (
   <Page>
-    <Events />
+    <h2>About</h2>
   </Page>
 );

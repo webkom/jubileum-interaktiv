@@ -1,56 +1,13 @@
 import format from 'date-fns/format';
-
-const events = {
-  'Mandag': [{
-    id: 2,
-    title: 'Mekk og drekk',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }],
-  'Tirsdag': [{
-    id: 2,
-    title: 'Strikk og drikk',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }],
-  'Onsdag': [{
-    id: 3,
-    title: 'Vask og smask',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }],
-  'Torsdag': [{
-    id: 3,
-    title: 'Løp og kjøp',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }, {
-    id: 4,
-    title: 'Penger schmenger',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }],
-  'Fredag': [{
-    id: 5,
-    title: 'Ljug og sug',
-    startsAt: new Date(),
-    endsAt: new Date(),
-    location: 'Downtown'
-  }],
-};
+import parse from 'date-fns/parse';
 
 export default () => {
   return (
-    <div className="container">
-      {Object.keys(events).map((day) => (
+    <div>
+      {Object.entries(events).map(([day, events]) => (
         <div key={day} className="day">
           <h2>{day}</h2>
-          {events[day].map((event) => (
+          {events.map((event) => (
             <div key={event.id} className="event">
               <h3>{event.title}</h3>
               <div>
@@ -64,11 +21,6 @@ export default () => {
       ))}
 
       <style jsx>{`
-        .container {
-          max-width: 640px;
-          margin: 0 auto;
-        }
-        
         .day {
           margin-bottom: 10px;
         }
@@ -83,3 +35,24 @@ export default () => {
     </div>
   );
 };
+
+const events = [{
+  id: 1,
+  title: 'Strikk og drikk',
+  startsAt: parse('March 21, 2017 15:00'),
+  location: 'Downtown'
+}, {
+  id: 2,
+  title: 'Mekk og drekk',
+  startsAt: parse('March 22, 2017 17:00'),
+  location: 'Downtown'
+}, {
+  id: 3,
+  title: 'Rug og sug',
+  startsAt: parse('March 23, 2017 17:00'),
+  location: 'Downtown'
+}].reduce((groupedByDay, event) => {
+  const day = format(event.startsAt, 'dddd');
+  groupedByDay[day] = [...(groupedByDay[day] || []), event];
+  return groupedByDay;
+}, {});
