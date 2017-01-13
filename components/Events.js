@@ -1,7 +1,7 @@
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 
-export default () => {
+export default ({ events }) => {
   return (
     <div>
       {Object.entries(events).map(([day, events]) => (
@@ -35,24 +35,3 @@ export default () => {
     </div>
   );
 };
-
-const events = [{
-  id: 1,
-  title: 'Strikk og drikk',
-  startsAt: parse('March 21, 2017 15:00'),
-  location: 'Downtown'
-}, {
-  id: 2,
-  title: 'Mekk og drekk',
-  startsAt: parse('March 22, 2017 17:00'),
-  location: 'Downtown'
-}, {
-  id: 3,
-  title: 'Rug og sug',
-  startsAt: parse('March 23, 2017 17:00'),
-  location: 'Downtown'
-}].reduce((groupedByDay, event) => {
-  const day = format(event.startsAt, 'dddd');
-  groupedByDay[day] = [...(groupedByDay[day] || []), event];
-  return groupedByDay;
-}, {});

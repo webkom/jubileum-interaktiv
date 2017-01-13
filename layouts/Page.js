@@ -35,6 +35,7 @@ export default class extends Component {
         <div>
           <Link href='/'>Hjem</Link>
           <Link href='/about'>Om</Link>
+          <Link href='/contact'>Kontakt</Link>
         </div>
 
         {this.props.children}
