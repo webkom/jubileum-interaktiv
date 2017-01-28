@@ -6,7 +6,8 @@ export default function animateAbakus(canvas, {
   offsetY = 40,
   lineSpacing = 5,
   sideWidth = 10,
-  width = 640
+  width = 640,
+  frame = false
 } = {}) {
   const height = (6 * (2 * radius + padding + lineSpacing)) + 2 * offsetY;
   canvas.width = width;
@@ -22,22 +23,24 @@ export default function animateAbakus(canvas, {
   function draw(time) {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let i = 0; i < 7; i++) {
-      context.fillStyle = 'rgba(0, 0, 0, .3)';
-      context.fillRect(0, offsetY + i * (2 * radius + padding + lineSpacing), width, 2);
-    }
+    if (frame) {
+      for (let i = 0; i < 7; i++) {
+        context.fillStyle = 'rgba(0, 0, 0, .3)';
+        context.fillRect(0, offsetY + i * (2 * radius + padding + lineSpacing), width, 2);
+      }
 
-    context.fillStyle = 'rgba(186, 115, 50, 0.9)';
-    context.fillRect(0, 0, sideWidth, height);
-    context.fillRect(width - sideWidth, 0, sideWidth, height);
+      context.fillStyle = 'rgba(186, 115, 50, 0.9)';
+      context.fillRect(0, 0, sideWidth, height);
+      context.fillRect(width - sideWidth, 0, sideWidth, height);
+    }
 
     PIXELS.forEach((pixel, i) => {
       const x = pixel.x * (radius * 2 + padding);
       const y = pixel.y * (radius * 2 + padding + lineSpacing);
 
-      const opacity = Math.cos(i) * Math.cos(i) + 0.5;
+      const opacity = Math.cos(i) * Math.cos(i) + 0.6;
       const ratio = i / Math.max(1, PIXELS.length);
-      context.fillStyle = 'rgba(255, 0, 0, ' + opacity + ')';
+      context.fillStyle = 'rgba(232, 50, 40, ' + opacity + ')';
       context.beginPath();
       context.arc(
         offsetX + x + 1.5 * Math.sin((0.005 * ratio) * time),
