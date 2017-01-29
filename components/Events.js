@@ -29,7 +29,11 @@ class Event extends Component {
     return (
       <div className="box">
         <div>
-          <a onClick={() => this.setState(expand)}><h3 className="eventTitle">{event.title} {this.state.expanded ? '\u25BF' : '\u25B9'}</h3></a>
+          <a onClick={() => this.setState(expand)}>
+            <h3 className="eventTitle">
+              {event.title} {this.state.expanded ? '\u25BF' : '\u25B9'}
+            </h3>
+          </a>
 
           {this.state.expanded && (
             <div style={{ paddingTop: 20 }}>
@@ -103,7 +107,7 @@ export default ({ events }) => {
         }
 
         .title {
-          padding: 10px;
+          padding: 15px 20px;
           color: #888;
           letter-spacing: 2px;
           font-size: 20px;
