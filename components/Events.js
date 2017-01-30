@@ -99,7 +99,7 @@ export default ({ events }) => {
       <style jsx>{`
         .root  {
           width: 100%;
-          padding-top: 20px;
+          padding: 20px 0;
         }
 
         .day {
