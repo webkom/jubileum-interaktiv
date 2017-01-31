@@ -77,7 +77,7 @@ class Day extends Component {
                   onClick={() => this.setState({ selectedIndex: index })}
                   size={40}
                   style={{
-                    transform: `translateX(${hour/24 * 700}px) scale(${selected ? 1.5 : 1})`
+                    transform: `translateX(${(hour-8)/24 * 700}px) scale(${selected ? 1.5 : 1})`
                   }}
                 >
                   {hour}
