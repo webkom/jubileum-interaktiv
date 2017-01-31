@@ -11,12 +11,17 @@ const trans = {
   'Sunday': 'Søn'
 };
 
-const Circle = ({ children, size = 50, style, ...props }) => (
+const Circle = ({
+  children,
+  size = 50,
+  style,
+  selected,
+  ...props
+}) => (
   <button className="root selected" style={{
     width: size,
     height: size,
     borderRadius: size / 2,
-    backgroundColor: '#b11b11',
     ...style
   }} {...props}>
     {children}
@@ -28,11 +33,12 @@ const Circle = ({ children, size = 50, style, ...props }) => (
         justify-content: center;
         font-weight: 600;
         color: rgba(255, 255, 255, .4);
-        transition: color .2s;
+        transition: transform .1s, color .2s;
         font-size: 22px;
         border: 0;
         outline: none;
         cursor: pointer;
+        background: #b11b11;
       }
 
       .root:hover {
@@ -64,13 +70,14 @@ class Day extends Component {
           <div className="row">
             {events.map((event, index) => {
               const hour = format(event.startsAt, 'H');
+              const selected = index === this.state.selectedIndex;
               return (
                 <Circle
                   key={index}
                   onClick={() => this.setState({ selectedIndex: index })}
-                  size={index === this.state.selectedIndex ? 60 : 40}
+                  size={40}
                   style={{
-                    transform: `translateX(${hour/24 * 700}px)`
+                    transform: `translateX(${hour/24 * 700}px) scale(${selected ? 1.5 : 1})`
                   }}
                 >
                   {hour}
@@ -90,17 +97,17 @@ class Day extends Component {
             width: 100%;
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             background: white;
             margin-top: 25px;
-            padding: 20px;
+            padding: 30px 20px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, .1);
           }
 
           .date {
-            width: 140px;
             text-align: center;
             line-height: 30px;
+            padding: 0 40px 20px 20px;
           }
 
           .right {
@@ -127,7 +134,7 @@ class Day extends Component {
             height: 6px;
             background: #eee;
             width: 100%;
-            top: 31px;
+            top: 20px;
             border-radius: 3px;
           }
         `}</style>
