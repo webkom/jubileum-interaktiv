@@ -105,7 +105,7 @@ class Day extends Component {
               </time>
             </h2>
             <div style={{ padding: '20px 0' }}>
-              {events.description}
+              {event.description}
             </div>
             <Button>Påmelding via abakus.no &rarr;</Button>
           </div>
