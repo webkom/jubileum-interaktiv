@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import format from 'date-fns/format';
+import Button from './Button';
 
 const trans = {
   'Monday': 'Man',
@@ -18,7 +19,7 @@ const Circle = ({
   selected,
   ...props
 }) => (
-  <button className="root selected" style={{
+  <button className={selected && 'selected'} style={{
     width: size,
     height: size,
     borderRadius: size / 2,
@@ -27,7 +28,7 @@ const Circle = ({
     {children}
 
     <style jsx>{`
-      .root {
+      button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -39,9 +40,16 @@ const Circle = ({
         outline: none;
         cursor: pointer;
         background: #b11b11;
+        z-index: 10;
+        position: relative;
+        overflow: hidden;
       }
 
-      .root:hover {
+      button:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .selected {
         color: rgba(255, 255, 255, 1);
       }
     `}
@@ -57,7 +65,8 @@ class Day extends Component {
   render() {
     const { day, events } = this.props;
 
-    const date = events[0].startsAt;
+    const event = events[this.state.selectedIndex];
+    const date = event.startsAt;
 
     return (
       <div className="day">
@@ -76,6 +85,7 @@ class Day extends Component {
                   key={index}
                   onClick={() => this.setState({ selectedIndex: index })}
                   size={40}
+                  selected={selected}
                   style={{
                     transform: `translateX(${(hour-8)/24 * 700}px) scale(${selected ? 1.5 : 1})`
                   }}
@@ -87,8 +97,17 @@ class Day extends Component {
           </div>
 
           <div className="content">
-            <h2>{events[this.state.selectedIndex].title}</h2>
-            {events[this.state.selectedIndex].description}
+            <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              {event.title}
+              <time style={{ color: '#999' }}>
+                {format(event.startsAt, 'HH:mm')}
+                {event.endsAt && <span> &ndash; {format(event.endsAt, 'HH:mm')}</span>}
+              </time>
+            </h2>
+            <div style={{ padding: '20px 0' }}>
+              {events.description}
+            </div>
+            <Button>Påmelding via abakus.no &rarr;</Button>
           </div>
         </div>
 

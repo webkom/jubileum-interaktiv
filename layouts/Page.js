@@ -74,6 +74,10 @@ export default class extends Component {
             cursor: pointer;
           }
 
+          :global(h2) {
+            font-weight: 400;
+          }
+
 
           .title {
             font-size: 85px;
