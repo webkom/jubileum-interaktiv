@@ -1796,6 +1796,12 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
+json2mq@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/json2mq/-/json2mq-0.2.0.tgz#b637bd3ba9eabe122c83e9720483aeb10d2c904a"
+  dependencies:
+    string-convert "^0.2.0"
+
 json5@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.0.tgz#9b20715b026cbe3778fd769edccd822d8332a5b2"
@@ -2396,6 +2402,12 @@ react-hot-loader@3.0.0-beta.6:
     redbox-react "^1.2.5"
     source-map "^0.4.4"
 
+react-media@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-media/-/react-media-1.4.0.tgz#fe2f1f7450d0b08e3cd04b19b21eb71bef64ce98"
+  dependencies:
+    json2mq "^0.2.0"
+
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"
@@ -2694,6 +2706,10 @@ stream-http@^2.3.1:
     readable-stream "^2.1.0"
     to-arraybuffer "^1.0.0"
     xtend "^4.0.0"
+
+string-convert@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
 
 string-hash@^1.1.1:
   version "1.1.1"

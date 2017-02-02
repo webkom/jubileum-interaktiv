@@ -37,7 +37,16 @@ class Event extends Component {
 
           {this.state.expanded && (
             <div style={{ paddingTop: 20 }}>
-              {event.description}
+              <div>
+                <time className="when">
+                  {format(event.startsAt, 'HH:mm')}
+                  {event.endsAt && <span> &ndash; {format(event.endsAt, 'HH:mm')}</span>}
+                </time>
+              </div>
+
+              <div style={{ paddingTop: 20 }}>
+                {event.description}
+              </div>
 
               <div style={{ paddingTop: 20 }}>
                 {event.link && <Button>Påmelding via Abakus.no &rarr;</Button>}
@@ -45,32 +54,29 @@ class Event extends Component {
             </div>
           )}
         </div>
-        <div>
-          <time className="when">
-            {format(event.startsAt, 'HH:mm')}
-            {event.endsAt && <span> &ndash; {format(event.endsAt, 'HH:mm')}</span>}
-          </time>
-        </div>
 
         <style jsx>{`
           .eventTitle {
-            font-size: 26px;
+            font-size: 22px;
           }
 
           .box {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px #eee;
             border: 1px solid #ccc;
             margin-bottom: 20px;
+            border-right: 3px solid #b11b11;
+          }
+
+          .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
           }
 
           .when {
-            font-size: 24px;
+            font-size: 18px;
             color: #aaa;
           }
 
@@ -89,7 +95,7 @@ export default ({ events }) => {
     <div className="root">
       {Object.entries(events).map(([day, events]) => (
         <div key={day} className="day">
-          <h2 className="title">{trans[day]}</h2>
+          <h2 className="title">{format(events[0].startsAt, 'dddd DD.MM')}</h2>
           {events.map((event) => (
             <Event event={event} key={event.id} />
           ))}

@@ -28,8 +28,8 @@ export default class extends Component {
         </Head>
 
         <WideBackground height={600}>
-          <Content alignItems="center" justifyContent="flex-end">
-            <span className="title">abakus fyller</span>
+          <Content alignItems="center" justifyContent="center">
+            <div className="title"><span>abakus fyller</span></div>
             <canvas
               ref={(ref) => { this.canvas = ref; }}
               className="canvas"
@@ -37,16 +37,6 @@ export default class extends Component {
             <div className="date">
               <time>13.–19. mars 2017</time>
             </div>
-          </Content>
-        </WideBackground>
-
-        <WideBackground height={64}>
-          <Content>
-            <Navigation items={[
-              ['/', 'Arrangementer'],
-              ['/', 'Informasjon'],
-              ['/', 'Abakus']
-            ]}/>
           </Content>
         </WideBackground>
 
@@ -86,6 +76,7 @@ export default class extends Component {
             font-weight: 700;
             text-shadow: 4px 2px 0 #444;
             padding-bottom: 10px;
+            text-align: center;
           }
 
           .title::selection {

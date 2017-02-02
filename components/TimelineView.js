@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import format from 'date-fns/format';
 import Button from './Button';
+import Circle from './Circle';
+
+const MOBILE = 'max-width: 400px';
 
 const trans = {
   'Monday': 'Man',
@@ -12,49 +15,82 @@ const trans = {
   'Sunday': 'Søn'
 };
 
-const Circle = ({
-  children,
-  size = 50,
-  style,
-  selected,
-  ...props
-}) => (
-  <button className={selected && 'selected'} style={{
-    width: size,
-    height: size,
-    borderRadius: size / 2,
-    ...style
-  }} {...props}>
-    {children}
+const Timeline = ({ items, selectedIndex, onChangeItem }) => (
+  <div>
+    <div className="bar" />
+    {items.map((hour, index) => {
+      const selected = index === selectedIndex;
+      console.log(index, selectedIndex);
+      return (
+        <Circle
+          key={index}
+          onClick={() => onChangeItem(index)}
+          size={40}
+          selected={selected}
+          style={{
+            transform: `translateX(${(hour-8)/24 * 700}px) scale(${selected ? 1.5 : 1})`
+          }}
+        >
+          {hour}
+        </Circle>
+      );
+    })}
 
     <style jsx>{`
-      button {
+      div {
+        flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        color: rgba(255, 255, 255, .4);
-        transition: transform .1s, color .2s;
-        font-size: 22px;
-        border: 0;
-        outline: none;
-        cursor: pointer;
-        background: #b11b11;
-        z-index: 10;
+        flex-direction: row;
         position: relative;
-        overflow: hidden;
+        align-items: center;
       }
 
-      button:hover {
-        color: rgba(255, 255, 255, 1);
-      }
-
-      .selected {
-        color: rgba(255, 255, 255, 1);
+      .bar {
+        position: absolute;
+        content: '';
+        height: 6px;
+        background: #eee;
+        width: 100%;
+        top: 20px;
+        border-radius: 3px;
       }
     `}
     </style>
-  </button>
+  </div>
+);
+
+
+const Event = ({ event }) => (
+  <div className="root">
+    <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {event.title}
+      <time style={{ color: '#999' }}>
+        {format(event.startsAt, 'HH:mm')}
+        {event.endsAt && <span> &ndash; {format(event.endsAt, 'HH:mm')}</span>}
+      </time>
+    </h2>
+
+    <div style={{ padding: '20px 0' }}>
+      {event.description}
+    </div>
+
+    {event.link && <Button>Påmelding via abakus.no &rarr;</Button>}
+
+    <style jsx>{`
+      .root {
+        margin: 20px;
+        padding: 20px;
+        border-left: 3px solid #b11b11;
+      }
+
+      @media (max-width: 400px) {
+        .root {
+          border-left: 0;
+          border-top: 3px solid #b11b11;
+        }
+      }
+    `}</style>
+  </div>
 );
 
 class Day extends Component {
@@ -76,39 +112,13 @@ class Day extends Component {
         </div>
 
         <div className="right">
-          <div className="row">
-            {events.map((event, index) => {
-              const hour = format(event.startsAt, 'H');
-              const selected = index === this.state.selectedIndex;
-              return (
-                <Circle
-                  key={index}
-                  onClick={() => this.setState({ selectedIndex: index })}
-                  size={40}
-                  selected={selected}
-                  style={{
-                    transform: `translateX(${(hour-8)/24 * 700}px) scale(${selected ? 1.5 : 1})`
-                  }}
-                >
-                  {hour}
-                </Circle>
-              );
-            })}
-          </div>
+          <Timeline
+            items={events.map((event) => format(event.startsAt, 'H'))}
+            selectedIndex={this.state.selectedIndex}
+            onChangeItem={(selectedIndex) => this.setState({ selectedIndex })}
+          />
 
-          <div className="content">
-            <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              {event.title}
-              <time style={{ color: '#999' }}>
-                {format(event.startsAt, 'HH:mm')}
-                {event.endsAt && <span> &ndash; {format(event.endsAt, 'HH:mm')}</span>}
-              </time>
-            </h2>
-            <div style={{ padding: '20px 0' }}>
-              {event.description}
-            </div>
-            <Button>Påmelding via abakus.no &rarr;</Button>
-          </div>
+          <Event event={event} />
         </div>
 
         <style jsx>{`
@@ -123,6 +133,12 @@ class Day extends Component {
             box-shadow: 0px 4px 6px rgba(0, 0, 0, .1);
           }
 
+          @media (max-width: 400px) {
+            .day {
+              flex-direction: column;
+            }
+          }
+
           .date {
             text-align: center;
             line-height: 30px;
@@ -131,30 +147,6 @@ class Day extends Component {
 
           .right {
             width: 100%;
-          }
-
-          .content {
-            margin: 20px;
-            padding: 20px;
-            border-left: 3px solid #b11b11;
-          }
-
-          .row {
-            flex: 1;
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            align-items: center;
-          }
-
-          .row::before {
-            position: absolute;
-            content: '';
-            height: 6px;
-            background: #eee;
-            width: 100%;
-            top: 20px;
-            border-radius: 3px;
           }
         `}</style>
       </div>
