@@ -7,6 +7,7 @@ import animatedAbakus from '../animatedAbakus';
 import Content from '../components/Content';
 import WideBackground from '../components/WideBackground';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
@@ -25,6 +26,7 @@ export default class extends Component {
           <title>{this.props.title} &middot; Jubileum</title>
           <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
           <link rel="stylesheet" href="/static/nprogress.css" />
+          <script src="https://use.fontawesome.com/f3b8128270.js"></script>
         </Head>
 
         <WideBackground height={600}>
@@ -43,6 +45,8 @@ export default class extends Component {
         <Content>
           {this.props.children}
         </Content>
+
+        <Footer />
 
         <style jsx>{`
           :global(*) {
