@@ -148,6 +148,11 @@ class Day extends Component {
           .right {
             width: 100%;
           }
+
+          .title {
+            width: 50px;
+          }
+
         `}</style>
       </div>
     );

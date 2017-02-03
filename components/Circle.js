@@ -21,6 +21,8 @@ const Circle = ({
 
     <style jsx>{`
       button {
+        font-family: Ubuntu, sans-serif;
+        padding-right: 1px;
         display: flex;
         align-items: center;
         justify-content: center;

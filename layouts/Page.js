@@ -23,7 +23,7 @@ export default class extends Component {
         <Head>
           <meta charSet="utf-8" />
           <title>{this.props.title} &middot; Jubileum</title>
-          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu:700" rel="stylesheet" />
           <link rel="stylesheet" href="/static/nprogress.css" />
         </Head>
 
