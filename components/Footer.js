@@ -47,7 +47,7 @@ export default class Footer extends Component {
         <style jsx>{`
           .footer {
             width: 100%;
-            background-color: #333;
+            background-color: #222;
             color: white;
             margin-top: 50px;
             padding: 40px 0 20px 0;

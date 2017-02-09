@@ -15,7 +15,7 @@ Router.onRouteChangeError = () => NProgress.done();
 
 export default class extends Component {
   componentDidMount() {
-    animatedAbakus(this.canvas, {});
+    //animatedAbakus(this.canvas, {});
   }
 
   render() {
@@ -29,13 +29,9 @@ export default class extends Component {
           <script src="https://use.fontawesome.com/f3b8128270.js"></script>
         </Head>
 
-        <WideBackground height={600}>
+        <WideBackground height={500}>
           <Content alignItems="center" justifyContent="center">
-            <div className="title"><span>abakus fyller</span></div>
-            <canvas
-              ref={(ref) => { this.canvas = ref; }}
-              className="canvas"
-            />
+            <img src="/static/logo.svg" />
             <div className="date">
               <time>13.–19. mars 2017</time>
             </div>
