@@ -32,7 +32,7 @@ export default class Footer extends Component {
                 height="100%"
                 style={{ border: "none", overflow: "hidden" }}
                 scrolling="no"
-                frameborder="0"
+                frameBorder="0"
                 allowTransparency="true">
               </iframe>
             </div>

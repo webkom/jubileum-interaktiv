@@ -4,8 +4,8 @@ function WideBackground({ children, ...style }) {
       {children}
       <style jsx>{`
         .root {
-          background: #222;
-          color: #fff;
+          background: #F4F4F4;
+          color: #333;
           height: 500px;
           display: flex;
           flex-direction: column;

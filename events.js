@@ -41,4 +41,16 @@ export default [{
 }, {
   title: 'Labamba premierefest',
   startsAt: parse('March 16, 2017 21:00')
+}, {
+  title: 'Alumnidag + dåp',
+  startsAt: parse('March 17, 2017 10:00')
+}, {
+  title: 'Gjettelek',
+  startsAt: parse('March 17, 2017 12:00')
+}, {
+  title: 'Revy',
+  startsAt: parse('March 17, 2017 19:30')
+}, {
+  title: 'GALLA',
+  startsAt: parse('March 18, 2017 18:00')
 }];

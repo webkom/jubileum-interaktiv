@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import format from 'date-fns/format';
+import isToday from 'date-fns/is_today';
 import Button from './Button';
 import Circle from './Circle';
 
@@ -20,7 +21,6 @@ const Timeline = ({ items, selectedIndex, onChangeItem }) => (
     <div className="bar" />
     {items.map((hour, index) => {
       const selected = index === selectedIndex;
-      console.log(index, selectedIndex);
       return (
         <Circle
           key={index}
@@ -105,7 +105,7 @@ class Day extends Component {
     const date = event.startsAt;
 
     return (
-      <div className="day">
+      <div className={isToday(date) ? 'day today' : 'day'}>
         <div className="date">
           <h2 className="title">{trans[day]}</h2>
           <span style={{ color: '#b11b11' }}>{format(date, 'DD.MM')}</span>
@@ -131,6 +131,10 @@ class Day extends Component {
             margin-top: 25px;
             padding: 30px 20px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, .1);
+          }
+
+          .today {
+            border-left: 8px solid #efdbc2;
           }
 
           @media (max-width: 400px) {

@@ -29,9 +29,9 @@ export default class extends Component {
           <script src="https://use.fontawesome.com/f3b8128270.js"></script>
         </Head>
 
-        <WideBackground height={500}>
-          <Content alignItems="center" justifyContent="center">
-            <img src="/static/logo.svg" />
+        <WideBackground height={460}>
+          <Content alignItems="center" justifyContent="flex-end">
+            <img src="/static/logo.svg" style={{ marginLeft: -20 }} />
             <div className="date">
               <time>13.–19. mars 2017</time>
             </div>
@@ -84,7 +84,7 @@ export default class extends Component {
           }
 
           .date {
-            font-size: 22px;
+            font-size: 24px;
             letter-spacing: 2px;
             text-transform: uppercase;
             padding: 20px;
