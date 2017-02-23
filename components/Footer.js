@@ -9,7 +9,7 @@ export default class Footer extends Component {
     return (
       <div className='footer'>
         <div className='footerContent'>
-          <h2>Share the love</h2>
+          <h2>Sosialt</h2>
           <div className="sections">
 
             <div className='section'>
@@ -28,9 +28,7 @@ export default class Footer extends Component {
             <div className="section">
               <iframe
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAbakusNTNU%2F&tabs=timeline&width=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1717809791769695"
-                width="100%"
-                height="100%"
-                style={{ border: "none", overflow: "hidden" }}
+                style={{ border: "none", overflow: "hidden", height: "325px", width: "100%" }}
                 scrolling="no"
                 frameBorder="0"
                 allowTransparency="true">
@@ -102,7 +100,27 @@ export default class Footer extends Component {
 
           .credit {
             font-size: 12px;
-            margin-top: 40px;
+            margin: 40px 0 10px;
+          }
+
+          @media (max-width: 800px) {
+            .footerContent {
+              padding: 0 30px;
+            }
+
+            .footer h2 {
+              margin-bottom: 25px;
+            }
+
+            .sections {
+              flex-direction: column;
+            }
+
+            .section {
+              border-right: none;
+              margin-bottom: 30px;
+              padding: 0;
+            }
           }
         `}
         </style>
