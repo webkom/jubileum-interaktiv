@@ -31,7 +31,7 @@ export default class extends Component {
 
         <WideBackground height={460}>
           <Content alignItems="center" justifyContent="flex-end">
-            <img src="/static/logo.svg" style={{ marginLeft: -20 }} />
+            <img src="/static/logo.svg" style={{ marginLeft: -20, width: '100%', padding: 20 }} />
             <div className="date">
               <time>13.–19. mars 2017</time>
             </div>
