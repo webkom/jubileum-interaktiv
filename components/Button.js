@@ -6,8 +6,8 @@ export default function Button({ children, facebook, ...props }) {
         a {
           background: linear-gradient(#eee, #ddd);
           display: inline-block;
-          padding: 8px 10px;
-          font-size: 16px;
+          padding: 5px 10px;
+          font-size: 14px;
           color: #444;
           border: 0;
           cursor: pointer;
@@ -21,6 +21,7 @@ export default function Button({ children, facebook, ...props }) {
           z-index: 100;
           text-transform: uppercase;
           margin: 0 5px;
+          letter-spacing: 2px;
         }
 
         .facebook {

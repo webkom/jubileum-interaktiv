@@ -91,10 +91,10 @@ const Event = ({ event, selected }) => (
       {event.description}
     </div>
 
-    {event.link &&
-      <Button href={event.abakus}>Påmelding via abakus.no →</Button>}
+    {event.abakus &&
+      <Button href={event.abakus}>Påmelding via abakus.no</Button>}
     {event.facebook &&
-      <Button facebook href={event.facebook}>Vis på Facebook</Button>}
+      <Button facebook href={event.facebook}>Event på Facebook</Button>}
 
     <style jsx>
       {

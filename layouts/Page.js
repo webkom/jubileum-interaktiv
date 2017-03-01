@@ -23,10 +23,15 @@ export default class extends Component {
       <div className="container">
         <Head>
           <meta charSet="utf-8" />
-          <title>{this.props.title} &middot; Abakus 40 år</title>
+          <title>Abakus 40 år</title>
           <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu:700" rel="stylesheet" />
           <link rel="stylesheet" href="/static/nprogress.css" />
           <script src="https://use.fontawesome.com/f3b8128270.js"></script>
+          <link rel="icon" href="/static/favicon.png" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Abakus 40 år!" />
+          <meta property="og:description" content="" />
+          <meta property="og:image" content="" />
         </Head>
 
         <WideBackground height={460}>
