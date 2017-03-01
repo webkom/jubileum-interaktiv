@@ -10,9 +10,11 @@
     "postinstall": "if [ $BUILD_ASSETS ]; then npm run build; fi"
   },
   "dependencies": {
-    "date-fns": "^1.25.0",
-    "next": "2.0.0-beta.16",
+    "date-fns": "^1.28.0",
+    "next": "2.0.0-beta.36",
     "nprogress": "^0.2.0",
-    "react-media": "^1.4.0"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-media": "^1.5.1"
   }
 }

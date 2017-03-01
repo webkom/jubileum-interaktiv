@@ -35,7 +35,7 @@ export default class extends Component {
 
   render() {
     return (
-      <Page title="Home">
+      <Page title="Arrangementer">
         <Media
           query="(max-width: 799px)"
         >

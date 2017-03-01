@@ -6,7 +6,8 @@ export default [{
   endsAt: parse('March 13, 2017 15:00'),
   location: 'Downtown',
   link: 'https://abakus.no/event/123',
-  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.'
+  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
+  facebook: '/123'
 }, {
   title: 'Slipp av lang proggekonk',
   startsAt: parse('March 13, 2017 12:00')

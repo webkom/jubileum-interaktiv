@@ -23,7 +23,7 @@ export default class extends Component {
       <div className="container">
         <Head>
           <meta charSet="utf-8" />
-          <title>{this.props.title} &middot; Jubileum</title>
+          <title>{this.props.title} &middot; Abakus 40 år</title>
           <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu:700" rel="stylesheet" />
           <link rel="stylesheet" href="/static/nprogress.css" />
           <script src="https://use.fontawesome.com/f3b8128270.js"></script>
@@ -56,6 +56,7 @@ export default class extends Component {
             font-family: Lato, 'Open Sans', sans-serif;
             background: #f4f4f4;
             font-size: 18px;
+            line-height: 1.6;
           }
 
           :global(a) {
