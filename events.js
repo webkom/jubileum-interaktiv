@@ -17,8 +17,8 @@ export default [{
   facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Slipp av lang programmeringskonkurranse med BEKK',
-  startsAt: parse('March 13, 2017 12:00+01:00'),
-  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 12:00! Mer infomasjon kommer.'
+  startsAt: parse('March 13, 2017 11:00+01:00'),
+  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 11:00! Mer infomasjon kommer.'
 }, {
   title: 'Kurs med Capra Consulting',
   startsAt: parse('March 13, 2017 16:00+01:00'),
