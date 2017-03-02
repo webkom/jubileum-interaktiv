@@ -28,6 +28,7 @@ export default class extends Component {
           <link rel="stylesheet" href="/static/nprogress.css" />
           <script src="https://use.fontawesome.com/f3b8128270.js"></script>
           <link rel="icon" href="/static/favicon.png" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Abakus 40 år!" />
           <meta property="og:description" content="Hold av uken, fordi i 2017 fyller Abakus 40 år! Abakus har i den anledning satt opp et fullspekket program for hele uken, så ta på deg festskoene og vær forberedt på lite søvn, mye moro og en skikkelig feiring! I løpet av én uke har du muligheten til å oppleve et stort spekter av det Abakus har å tilby!" />
