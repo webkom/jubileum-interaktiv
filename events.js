@@ -13,7 +13,8 @@ export default [{
   startsAt: parse('March 13, 2017 10:00'),
   endsAt: parse('March 13, 2017 15:00'),
   location: 'Gløshaugen',
-  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.'
+  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
+  facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Slipp av lang programmeringskonkurranse',
   startsAt: parse('March 13, 2017 12:00'),
@@ -31,7 +32,8 @@ export default [{
   startsAt: parse('March 14, 2017 10:00'),
   endsAt: parse('March 14, 2017 15:00'),
   location: 'Kontoret',
-  description: 'Gjør deg klar for nok en gøyal dag på kontoret! I dag feirer vi Π-dagen. Den matematiske konstanten som er definert som forholdet mellom omkretsen og diameteren til en sirkel har fått en stor plass i hjerte til enhver gløsing.'
+  description: 'Gjør deg klar for nok en gøyal dag på kontoret! I dag feirer vi Π-dagen. Den matematiske konstanten som er definert som forholdet mellom omkretsen og diameteren til en sirkel har fått en stor plass i hjerte til enhver gløsing.',
+  facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Pub-til-pub med Bekk',
   startsAt: parse('March 14, 2017 17:00'),
@@ -58,7 +60,8 @@ export default [{
   title: 'Kaketorsdag',
   startsAt: parse('March 16, 2017 10:00'),
   location: 'Kontoret',
-  description: 'Ordet jubileum eksisterer ikke uten ordet kake, så i dag feirer vi 40 år med et stykke kunst av et bakstverk. Dette er ukas beste mulighet for å sette sommerkroppen på vent og glede ditt usynlige deg med endorfiner bare et sukkerrush fra en annen verden kan gi deg.'
+  description: 'Ordet jubileum eksisterer ikke uten ordet kake, så i dag feirer vi 40 år med et stykke kunst av et bakstverk. Dette er ukas beste mulighet for å sette sommerkroppen på vent og glede ditt usynlige deg med endorfiner bare et sukkerrush fra en annen verden kan gi deg.',
+  facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Revy',
   startsAt: parse('March 16, 2017 19:30'),
@@ -73,6 +76,13 @@ export default [{
   description: 'Har revyen gitt deg sommerfugler i magen og vekket danskefoten? Vi vet hvor du kan slippe deg løs! Etter premieren til Abakusrevyen, torsdag 16 mars, står LaBamba klare til å serve deg på Trondhjem Seilforening.  Og husk, cash is king!',
   abakus: 'https://abakus.no/event/1996-premierefest/',
   facebook: 'https://www.facebook.com/events/1869604529975848/'
+}, {
+  title: 'Frokost-fredag',
+  startsAt: parse('March 17, 2017 11:00'),
+  endsAt: parse('March 17, 2017 14:00'),
+  location: 'Kontoret',
+  description: 'Når jubileumsuken begynner å tære på kroppen, er det viktig med påfyll av energi. Om du er for klein til å lage frokost selv eller er blakk etter den siste ukens prøvelser, ta turen innom kontoret for en rolig brunsj og lad opp til morgendagen.',
+  facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Revy',
   startsAt: parse('March 17, 2017 19:30'),

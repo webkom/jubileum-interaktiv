@@ -30,8 +30,8 @@ export default class extends Component {
           <link rel="icon" href="/static/favicon.png" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Abakus 40 år!" />
-          <meta property="og:description" content="" />
-          <meta property="og:image" content="" />
+          <meta property="og:description" content="Hold av uken, fordi i 2017 fyller Abakus 40 år! Abakus har i den anledning satt opp et fullspekket program for hele uken, så ta på deg festskoene og vær forberedt på lite søvn, mye moro og en skikkelig feiring! I løpet av én uke har du muligheten til å oppleve et stort spekter av det Abakus har å tilby!" />
+          <meta property="og:image" content="/static/graphimg.png" />
         </Head>
 
         <WideBackground height={460}>
