@@ -28,6 +28,7 @@ const Timeline = ({ items, selectedIndex, onChangeItem }) => (
           size={40}
           selected={selected}
           style={{
+            display: 'block',
             transform: `translateX(${(hour - 8) / 24 * 700}px) scale(${selected
               ? 1.5
               : 1})`
