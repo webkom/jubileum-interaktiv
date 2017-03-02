@@ -16,9 +16,9 @@ export default [{
   description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
-  title: 'Slipp av lang programmeringskonkurranse',
+  title: 'Slipp av lang programmeringskonkurranse med BEKK',
   startsAt: parse('March 13, 2017 12:00+01:00'),
-  description: 'Mer info kommer'
+  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 12:00! Mer infomasjon kommer.'
 }, {
   title: 'Kurs med Capra Consulting',
   startsAt: parse('March 13, 2017 16:00+01:00'),
