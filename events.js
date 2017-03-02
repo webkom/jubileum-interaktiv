@@ -40,7 +40,7 @@ export default [{
   endsAt: parse('March 14, 2017 23:59'),
   location: 'Midtbyen',
   description: 'BEKK arrangerer Pub-til-Pub Rebus! Oppmøte foran Hovedbygget hvor vi tar felles buss ned til midtbyen for bespisning. Deretter danner vi lag og starter Pub-til-Pub runden, hvor det vil være ulike poster på hvert sted. Velkommen!',
-  abakus: 'https://abakus.no/event/1994-bekk/',
+  abakus: 'https://abakus.no/event/1998-pub-til-pub-rebus-med-bekk/',
   facebook: 'https://www.facebook.com/events/423137358027660/'
 }, {
   title: 'Barnas dag',
