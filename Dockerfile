@@ -9,8 +9,7 @@ COPY . /app/
 WORKDIR /app
 
 RUN set -e \
-  && npm install -g yarn \
-  && yarn \
-  && yarn build
+  && npm install \
+  && npm run build
 
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["npm", "start"]
