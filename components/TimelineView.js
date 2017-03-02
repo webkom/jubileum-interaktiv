@@ -93,7 +93,7 @@ const Event = ({ event, selected }) => (
     </div>
 
     {event.abakus &&
-      <Button href={event.abakus}>Påmelding via abakus.no</Button>}
+      <Button href={event.abakus}>Arrangement på abakus.no</Button>}
     {event.facebook &&
       <Button facebook href={event.facebook}>Event på Facebook</Button>}
 

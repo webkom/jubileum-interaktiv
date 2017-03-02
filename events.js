@@ -57,7 +57,7 @@ export default [{
   abakus: 'https://abakus.no/event/1992-lan/',
   facebook: 'https://www.facebook.com/events/261345810987335/'
 }, {
-  title: 'Kaketorsdag',
+  title: 'Kaketorsdag og slipp av kort programmeringskonkurranse',
   startsAt: parse('March 16, 2017 10:00+01:00'),
   location: 'Kontoret',
   description: 'Ordet jubileum eksisterer ikke uten ordet kake, så i dag feirer vi 40 år med et stykke kunst av et bakstverk. Dette er ukas beste mulighet for å sette sommerkroppen på vent og glede ditt usynlige deg med endorfiner bare et sukkerrush fra en annen verden kan gi deg.',

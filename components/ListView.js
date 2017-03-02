@@ -49,7 +49,7 @@ class Event extends Component {
               </div>
 
               <div style={{ paddingTop: 20 }}>
-                {event.abakus && <Button href={event.abakus}>Påmelding via Abakus.no &rarr;</Button>}
+                {event.abakus && <Button href={event.abakus}>Arrangement på Abakus.no &rarr;</Button>}
                 {event.facebook &&
                   <Button facebook href={event.facebook}>Event på Facebook</Button>}
               </div>
