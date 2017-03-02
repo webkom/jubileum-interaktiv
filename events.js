@@ -25,7 +25,7 @@ export default [{
   endsAt: parse('March 13, 2017 23:59'),
   location: 'IT-vest 454',
   description: 'Kunne du tenke deg å utvikle noe greier for mobile plattformer men også tilegne deg kunnskap som er så og si direkte anvendbart for generell frontendutvikling i JavaScript? Da kan dette kurset i React Native være noe for deg.',
-  abakus: 'https://abakus.no/event/1997-kurs-i-react-native-med-capra-consulting/',
+  abakus: 'https://abakus.no/event/1999-react-native-med-capra/',
   facebook: 'https://www.facebook.com/events/1940302012857992/'
 }, {
   title: 'π-dagen',
