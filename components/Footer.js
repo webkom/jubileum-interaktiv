@@ -39,7 +39,9 @@ export default class Footer extends Component {
         </div>
 
         <div className="credit">
+        <a style={{ color: '#FFF' }} href="http://webkom.abakus.no/jubileum/">
           Laget av webkom <i className="fa fa-power-off" aria-hidden="true"></i>
+        </a>
         </div>
 
         <style jsx>{`
