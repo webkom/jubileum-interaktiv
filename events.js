@@ -17,7 +17,7 @@ export default [{
   startsAt: parse('March 13, 2017 11:00+01:00'),
   endsAt: parse('March 13, 2017 15:00+01:00'),
   location: 'Gløshaugen',
-  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
+  description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek. Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
 }, {
   title: 'Kurs med Capra Consulting',
