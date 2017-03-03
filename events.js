@@ -83,7 +83,7 @@ export default [{
 }, {
   title: 'Frokost-fredag',
   startsAt: parse('March 17, 2017 11:00+01:00'),
-  endsAt: parse('March 17, 2017 15:00+01:00'),
+  endsAt: parse('March 17, 2017 14:00+01:00'),
   location: 'Kontoret',
   description: 'Når jubileumsuken begynner å tære på kroppen, er det viktig med påfyll av energi. Om du er for klein til å lage frokost selv eller er blakk etter den siste ukens prøvelser, ta turen innom kontoret for en rolig brunsj og lad opp til morgendagen.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
