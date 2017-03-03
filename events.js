@@ -9,16 +9,16 @@ export default [{
   abakus: 'https://abakus.no/event/1990-apningsfest/',
   facebook: 'https://www.facebook.com/events/264402880662411/'
 }, {
-  title: 'Glassjakt (i løpet av dagen)',
+  title: 'Slipp av lang programmeringskonkurranse med BEKK',
   startsAt: parse('March 13, 2017 10:00+01:00'),
+  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 10:00! Mer infomasjon kommer.'
+}, {
+  title: 'Glassjakt (i løpet av dagen)',
+  startsAt: parse('March 13, 2017 11:00+01:00'),
   endsAt: parse('March 13, 2017 15:00+01:00'),
   location: 'Gløshaugen',
   description: 'Jubileumsuken er i gang, og det håper vi at du også er! Vi kickstarter uken med en spennende lek Vil du påstå at du har et øye for detaljer? Rundt omkring i kriker og kroker på Gløshaugen gjemmer det seg noe helt spesielt.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
-}, {
-  title: 'Slipp av lang programmeringskonkurranse med BEKK',
-  startsAt: parse('March 13, 2017 11:00+01:00'),
-  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 11:00! Mer infomasjon kommer.'
 }, {
   title: 'Kurs med Capra Consulting',
   startsAt: parse('March 13, 2017 16:00+01:00'),
@@ -29,7 +29,7 @@ export default [{
   facebook: 'https://www.facebook.com/events/1940302012857992/'
 }, {
   title: 'π-dagen',
-  startsAt: parse('March 14, 2017 10:00+01:00'),
+  startsAt: parse('March 14, 2017 11:00+01:00'),
   endsAt: parse('March 14, 2017 15:00+01:00'),
   location: 'Kontoret',
   description: 'Gjør deg klar for nok en gøyal dag på kontoret! I dag feirer vi Π-dagen. Den matematiske konstanten som er definert som forholdet mellom omkretsen og diameteren til en sirkel har fått en stor plass i hjerte til enhver gløsing.',
@@ -57,8 +57,12 @@ export default [{
   abakus: 'https://abakus.no/event/1992-lan/',
   facebook: 'https://www.facebook.com/events/261345810987335/'
 }, {
-  title: 'Kaketorsdag og slipp av kort programmeringskonkurranse',
+  title: 'Slipp av kort programmeringskonkurranse med Computas',
   startsAt: parse('March 16, 2017 10:00+01:00'),
+  description: 'En spennende programmeringskonkurranse laget av Computas, som går fra torsdag til lørdag. Mer informasjon kommer!'
+}, {
+  title: 'Kaketorsdag',
+  startsAt: parse('March 16, 2017 11:00+01:00'),
   location: 'Kontoret',
   description: 'Ordet jubileum eksisterer ikke uten ordet kake, så i dag feirer vi 40 år med et stykke kunst av et bakstverk. Dette er ukas beste mulighet for å sette sommerkroppen på vent og glede ditt usynlige deg med endorfiner bare et sukkerrush fra en annen verden kan gi deg.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
@@ -79,7 +83,7 @@ export default [{
 }, {
   title: 'Frokost-fredag',
   startsAt: parse('March 17, 2017 11:00+01:00'),
-  endsAt: parse('March 17, 2017 14:00+01:00'),
+  endsAt: parse('March 17, 2017 15:00+01:00'),
   location: 'Kontoret',
   description: 'Når jubileumsuken begynner å tære på kroppen, er det viktig med påfyll av energi. Om du er for klein til å lage frokost selv eller er blakk etter den siste ukens prøvelser, ta turen innom kontoret for en rolig brunsj og lad opp til morgendagen.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
