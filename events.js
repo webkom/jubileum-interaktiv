@@ -81,6 +81,12 @@ export default [{
   abakus: 'https://abakus.no/event/1996-premierefest/',
   facebook: 'https://www.facebook.com/events/1869604529975848/'
 }, {
+  title: 'Museum på P15',
+  startsAt: parse('March 17, 2017 10:00+01:00'),
+  endsAt: parse('March 17, 2017 16:00+01:00'),
+  location: 'P15',
+  description: 'Abakus er en tradisjonsrik linjeforening full av historie. Vi har vært på en liten skattejakt hvor det har blitt gravd frem skjulte vidundre fra Abakus sin storslagne fortid. På fredag kan dette beskues i skinnende montre på P15. Ta på deg din kulturelle hatt og bli med på museum. Utstillingen er å finne i 4. etasje.'
+}, {
   title: 'Frokost-fredag',
   startsAt: parse('March 17, 2017 11:00+01:00'),
   endsAt: parse('March 17, 2017 14:00+01:00'),
