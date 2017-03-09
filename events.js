@@ -85,7 +85,7 @@ export default [{
   startsAt: parse('March 17, 2017 10:00+01:00'),
   endsAt: parse('March 17, 2017 16:00+01:00'),
   location: 'P15',
-  description: 'Abakus er en tradisjonsrik linjeforening full av historie. Vi har vært på en liten skattejakt hvor det har blitt gravd frem skjulte vidundre fra Abakus sin storslagne fortid. På fredag kan dette beskues i skinnende montre på P15. Ta på deg din kulturelle hatt og bli med på museum. Utstillingen er å finne i 4. etasje.'
+  description: 'Abakus er en tradisjonsrik linjeforening med en rik historie. I anledning jubileet har vi funnet frem til ulike gjenstander fra Abakus\' storslagne fortid. På fredag kan alt sammen beskues i skinnende montre på P15. Finn frem nysgjerrighet og la deg forbløffte i 4. etasje klokken 10:00.'
 }, {
   title: 'Frokost-fredag',
   startsAt: parse('March 17, 2017 11:00+01:00'),
@@ -93,6 +93,12 @@ export default [{
   location: 'Kontoret',
   description: 'Når jubileumsuken begynner å tære på kroppen, er det viktig med påfyll av energi. Om du er for klein til å lage frokost selv eller er blakk etter den siste ukens prøvelser, ta turen innom kontoret for en rolig brunsj og lad opp til morgendagen.',
   facebook: 'https://www.facebook.com/events/1698860716807176/'
+}, {
+  title: 'Visning av AbaIdol',
+  startsAt: parse('March 17, 2017 16:00+01:00'),
+  endsAt: parse('March 17, 2017 17:00+01:00'),
+  location: 'Kontoret',
+  description: 'Klokken 16:00 på Abakus-kontoret vil bakgrunnen for Ababand bli vist, nemlig AbaIdol fra 2009. Vi lover reality på sitt absolutt ærligste.'
 }, {
   title: 'Revy',
   startsAt: parse('March 17, 2017 19:30+01:00'),
