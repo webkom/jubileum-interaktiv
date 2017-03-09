@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import format from 'date-fns/format';
 import isToday from 'date-fns/is_today';
+import isPast from 'date-fns/is_past';
+import parse from 'date-fns/parse';
 import Button from './Button';
 import Circle from './Circle';
 
@@ -117,9 +119,23 @@ const Event = ({ event, selected }) => (
   </div>
 );
 
+function getNextEventIndex(events) {
+  const timeToCompare = new Date().getTime();
+  const datesToCompare = events.map(event => event.startsAt);
+
+  for (let index = 0; index < datesToCompare.length; index++) {
+    let distance = parse(datesToCompare[index]).getTime() - timeToCompare;
+    if (distance >= 0) {
+      return index;
+    }
+  }
+
+  return 0;
+}
+
 class Day extends Component {
   state = {
-    selectedIndex: 0,
+    selectedIndex: getNextEventIndex(this.props.events),
     showAll: false
   };
 
@@ -145,23 +161,28 @@ class Day extends Component {
       this.setState(state => ({ showAll: !state.showAll }));
 
     return (
-      <div className={isToday(date) ? 'day today' : 'day'}>
+      <div
+        className={
+          isToday(date) ? 'day today' : isPast(date) ? 'day past' : 'day'
+        }
+      >
         <div className="date">
           <h2 className="title">{trans[day]}</h2>
           <span style={{ color: '#b11b11' }}>{format(date, 'DD.MM')}</span>
-          <button
-            onClick={toggleShowAll}
-            style={{
-              border: 0,
-              fontSize: '14px',
-              cursor: 'pointer',
-              background: 'transparent',
-              marginTop: 10,
-              color: '#888'
-            }}
-          >
-            Vis {this.state.showAll ? 'én' : 'alt'}
-          </button>
+          {events.length > 1 &&
+            <button
+              onClick={toggleShowAll}
+              style={{
+                border: 0,
+                fontSize: '14px',
+                cursor: 'pointer',
+                background: 'transparent',
+                marginTop: 10,
+                color: '#888'
+              }}
+            >
+              Vis {this.state.showAll ? 'én' : 'alt'}
+            </button>}
         </div>
 
         <div className="right">
@@ -189,7 +210,17 @@ class Day extends Component {
           }
 
           .today {
-            border-left: 8px solid #efdbc2;
+            border: 4px solid #efdbc2;
+          }
+
+          .past {
+            opacity: 0.3;
+            filter: blur(6px);
+          }
+
+          .past:hover {
+            opacity: 1;
+            filter: blur(0);
           }
 
           @media (max-width: 400px) {
@@ -222,7 +253,7 @@ class Day extends Component {
   }
 }
 
-export default ({ events }) => (
+const TimelineView = ({ events }) => (
   <div className="root">
     {Object.entries(events)
       .map(([day, events]) => <Day key={day} day={day} events={events} />)}
@@ -239,3 +270,5 @@ export default ({ events }) => (
     </style>
   </div>
 );
+
+export default TimelineView;
