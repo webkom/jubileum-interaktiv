@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import format from 'date-fns/format';
+import format from '../components/format';
 import parse from 'date-fns/parse';
 import getDay from 'date-fns/get_day';
 import Media from 'react-media';

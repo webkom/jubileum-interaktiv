@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import format from 'date-fns/format';
+import marked from 'marked';
+import format from '../components/format';
 import isToday from 'date-fns/is_today';
 import isPast from 'date-fns/is_past';
 import parse from 'date-fns/parse';
@@ -90,9 +91,7 @@ const Event = ({ event, selected }) => (
       </time>
     </h2>
 
-    <div style={{ padding: '20px 0' }}>
-      {event.description}
-    </div>
+    <div style={{ padding: '20px 0' }} dangerouslySetInnerHTML={{ __html: marked(event.description) }} />
 
     {event.abakus &&
       <Button href={event.abakus}>Arrangement på abakus.no</Button>}
@@ -105,6 +104,10 @@ const Event = ({ event, selected }) => (
       .root {
         margin: 20px;
         padding: 20px;
+      }
+
+      :global(p) {
+        margin-bottom: 10px;
       }
 
       @media (max-width: 400px) {
@@ -136,7 +139,7 @@ function getNextEventIndex(events) {
 class Day extends Component {
   state = {
     selectedIndex: getNextEventIndex(this.props.events),
-    showAll: false
+    showAll: isToday(this.props.events[0].startsAt)
   };
 
   render() {
@@ -167,7 +170,7 @@ class Day extends Component {
         }
       >
         <div className="date">
-          <h2 className="title">{trans[day]}</h2>
+          <h2 className="title">{format(date, 'ddd')}</h2>
           <span style={{ color: '#b11b11' }}>{format(date, 'DD.MM')}</span>
           {events.length > 1 &&
             <button

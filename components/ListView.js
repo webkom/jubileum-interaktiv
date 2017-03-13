@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import format from 'date-fns/format';
+import marked from 'marked';
+import format from '../components/format';
 import parse from 'date-fns/parse';
 import Link from 'next/link';
 import Box from './Box';
@@ -44,9 +45,7 @@ class Event extends Component {
                 </time>
               </div>
 
-              <div style={{ paddingTop: 20 }}>
-                {event.description}
-              </div>
+              <div style={{ padding: '20px 0' }} dangerouslySetInnerHTML={{ __html: marked(event.description) }} />
 
               <div style={{ paddingTop: 20 }}>
                 {event.abakus && <Button href={event.abakus}>Arrangement på Abakus.no &rarr;</Button>}

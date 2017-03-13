@@ -11,7 +11,7 @@ export default [{
 }, {
   title: 'Slipp av lang programmeringskonkurranse med BEKK',
   startsAt: parse('March 13, 2017 10:00+01:00'),
-  description: 'En ukelang programmeringskonkuranse med nye oppgaver hver dag som slippes klokken 10:00! Mer infomasjon kommer.'
+  description: 'En ukelang programmeringskonkuranse med nye oppgaver og premier hver dag som slippes klokken 10:00! Det vil være varierende vanskelighetsgrad, poeng for deltakelse og riktig svar i tillegg til en hovedvinner av hele konkurransen!\n\nMer informasjon her: http://konkurranse.bekk.no/1'
 }, {
   title: 'Glassjakt (i løpet av dagen)',
   startsAt: parse('March 13, 2017 11:00+01:00'),
