@@ -59,7 +59,7 @@ export default [{
 }, {
   title: 'Slipp av kort programmeringskonkurranse med Computas',
   startsAt: parse('March 16, 2017 10:00+01:00'),
-  description: 'En spennende programmeringskonkurranse laget av Computas, som går fra torsdag til lørdag. Mer informasjon kommer!'
+  description: 'En spennende programmeringskonkurranse laget av Computas, som går fra torsdag til lørdag. Mer informasjon Mer informasjon om konkurransen finner du på http://uni.computas.com.'
 }, {
   title: 'Kaketorsdag',
   startsAt: parse('March 16, 2017 11:00+01:00'),
