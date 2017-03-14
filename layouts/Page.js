@@ -19,7 +19,8 @@ const COMPANIES = [
   ['genus', 'http://genus.no'],
   ['geodata', 'http://geodata.no'],
   ['makingwaves', 'http://makingwaves.no'],
-  ['netcompany', 'http://netcompany.no']
+  ['netcompany', 'http://netcompany.no'],
+  ['multicom', 'http://multicom.no']
 ];
 
 export default class Page extends Component {
