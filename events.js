@@ -70,7 +70,7 @@ export default [{
   title: 'Revy',
   startsAt: parse('March 16, 2017 19:30+01:00'),
   location: 'Byscenen',
-  description: '16. og 17. mars spiller Abakus sin aller første revy på byscenen. Billetter kjøpes på byscenen.no',
+  description: '16\. og 17. mars spiller Abakus sin aller første revy på byscenen. Billetter kjøpes på byscenen.no',
   abakus: 'https://abakus.no/event/1979-abakusrevyen-2017/',
   facebook: 'https://www.facebook.com/events/432063403794600/'
 }, {
@@ -103,7 +103,7 @@ export default [{
   title: 'Revy',
   startsAt: parse('March 17, 2017 19:30+01:00'),
   location: 'Byscenen',
-  description: '16. og 17. mars spiller Abakus sin aller første revy på byscenen. Billetter kjøpes på byscenen.no',
+  description: '16\. og 17. mars spiller Abakus sin aller første revy på byscenen. Billetter kjøpes på byscenen.no',
   abakus: 'https://abakus.no/event/1979-abakusrevyen-2017/',
   facebook: 'https://www.facebook.com/events/432063403794600/'
 }, {
